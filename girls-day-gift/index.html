@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#ffdcee">
+  <title>A little surprise for you 💗</title>
+
+  <!-- Free Google Fonts: Great Vibes (script) + Cormorant Garamond (text).
+       If the device is offline, the fallback fonts in style.css are used. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== BACKGROUND LAYERS ========== -->
+  <!-- Pink-to-purple background that expands like a bloom when the gift opens -->
+  <div id="revealBg" aria-hidden="true"></div>
+  <!-- Twinkling stars and floating hearts (filled by script.js) -->
+  <div id="stars" class="fx-layer" aria-hidden="true"></div>
+  <div id="hearts" class="fx-layer" aria-hidden="true"></div>
+
+  <!-- ========== SCREEN 1: WELCOME ========== -->
+  <main id="welcome" class="screen">
+    <div class="screen-inner">
+
+      <div class="gift-stage" id="giftStage" aria-hidden="true">
+        <div class="gift" id="gift">
+          <div class="gift-body"><span class="ribbon"></span></div>
+          <div class="gift-lid">
+            <span class="ribbon"></span>
+            <span class="bow bow-left"></span>
+            <span class="bow bow-right"></span>
+          </div>
+          <div class="gift-glow"></div>
+        </div>
+      </div>
+
+      <h1 class="welcome-title">I have a little surprise for you! 💗</h1>
+      <button id="openBtn" class="btn" type="button">Open Your Gift 🎁</button>
+
+    </div>
+  </main>
+
+  <!-- ========== SCREEN 2: CELEBRATION ========== -->
+  <section id="celebration" class="screen hidden">
+
+    <!-- Flowers (built by script.js) -->
+    <div id="garden" class="garden" aria-hidden="true"></div>
+
+    <div class="screen-inner">
+      <p id="forLine" class="for-line"></p>
+
+      <!-- Letters are added by script.js so they can pop in one by one -->
+      <h2 id="mainTitle" class="main-title" aria-label="Happy Girls’ Day! 🌸💖"></h2>
+
+      <div id="messageStage" class="message-stage" aria-live="polite">
+        <p id="message" class="message"></p>
+      </div>
+
+      <div id="dots" class="dots" aria-hidden="true"></div>
+
+      <div class="btn-row">
+        <button id="nextBtn" class="btn btn-light" type="button" hidden>Keep going 💌</button>
+        <button id="againBtn" class="btn btn-light" type="button" hidden>Read it again 💌</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXTRAS ========== -->
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <button id="musicBtn" class="music-btn" type="button" aria-pressed="false" hidden>🎵 Play music</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
